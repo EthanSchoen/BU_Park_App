@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F4196ACF1DCE5AFC00642621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4196ACE1DCE5AFC00642621 /* AppDelegate.swift */; };
-		F4196AD11DCE5AFC00642621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4196AD01DCE5AFC00642621 /* ViewController.swift */; };
 		F4196AD41DCE5AFC00642621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4196AD21DCE5AFC00642621 /* Main.storyboard */; };
 		F4196AD71DCE5AFC00642621 /* BU_Park.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4196AD51DCE5AFC00642621 /* BU_Park.xcdatamodeld */; };
 		F4196AD91DCE5AFC00642621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4196AD81DCE5AFC00642621 /* Assets.xcassets */; };
 		F4196ADC1DCE5AFC00642621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4196ADA1DCE5AFC00642621 /* LaunchScreen.storyboard */; };
+		F4196AE61DCE60C800642621 /* Lot_Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4196AE51DCE60C800642621 /* Lot_Table.swift */; };
+		F4646E771DCE7797007D2BD0 /* Lot_Table_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4646E761DCE7797007D2BD0 /* Lot_Table_Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4196ACB1DCE5AFC00642621 /* BU Park.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BU Park.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4196ACE1DCE5AFC00642621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4196AD01DCE5AFC00642621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4196AD31DCE5AFC00642621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4196AD61DCE5AFC00642621 /* BU_Park.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BU_Park.xcdatamodel; sourceTree = "<group>"; };
 		F4196AD81DCE5AFC00642621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4196ADB1DCE5AFC00642621 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4196ADD1DCE5AFC00642621 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4196AE51DCE60C800642621 /* Lot_Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lot_Table.swift; path = ../Lot_Table.swift; sourceTree = "<group>"; };
+		F4646E761DCE7797007D2BD0 /* Lot_Table_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lot_Table_Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				F4196ACE1DCE5AFC00642621 /* AppDelegate.swift */,
-				F4196AD01DCE5AFC00642621 /* ViewController.swift */,
+				F4196AE51DCE60C800642621 /* Lot_Table.swift */,
+				F4646E761DCE7797007D2BD0 /* Lot_Table_Cell.swift */,
 				F4196AD21DCE5AFC00642621 /* Main.storyboard */,
 				F4196AD81DCE5AFC00642621 /* Assets.xcassets */,
 				F4196ADA1DCE5AFC00642621 /* LaunchScreen.storyboard */,
@@ -139,7 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4196AD11DCE5AFC00642621 /* ViewController.swift in Sources */,
+				F4646E771DCE7797007D2BD0 /* Lot_Table_Cell.swift in Sources */,
+				F4196AE61DCE60C800642621 /* Lot_Table.swift in Sources */,
 				F4196ACF1DCE5AFC00642621 /* AppDelegate.swift in Sources */,
 				F4196AD71DCE5AFC00642621 /* BU_Park.xcdatamodeld in Sources */,
 			);
@@ -301,6 +305,7 @@
 				F4196AE21DCE5AFC00642621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
