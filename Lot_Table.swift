@@ -17,6 +17,8 @@ class Lot_Table: UITableViewController {
         var name: String
         var spots_open: Int
         var max_spots: Int
+        var latitude: Double
+        var longitude: Double
     }
     
     func getLots(urlString: String, completion: @escaping ((Bool) -> Void)) {
@@ -28,7 +30,7 @@ class Lot_Table: UITableViewController {
                 do {
                     let parsedData = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String : Any]]
                     for i in parsedData {
-                        let obj = lot(name: i["name"] as! String, spots_open: i["open"] as! Int, max_spots: i["max"] as! Int)
+                        let obj = lot(name: i["name"] as! String, spots_open: i["open"] as! Int, max_spots: i["max"] as! Int, latitude: i["lat"] as! Double, longitude: i["long"] as! Double)
                         self.lots.append(obj)
                     }
                     completion(true)
@@ -62,11 +64,14 @@ class Lot_Table: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lot", for: indexPath) as! Lot_Table_Cell
-        
+
         // Configure the cell...
-        let alph = 0.6 * Float(lots[indexPath.row].spots_open)/Float(lots[indexPath.row].max_spots) + 0.1
-        cell.lot_name.text = lots[indexPath.row].name
-        cell.spots_open.text = String(lots[indexPath.row].spots_open) + " of " + String(lots[indexPath.row].max_spots)
+        let iter = indexPath.row
+        let alph = 0.6 * Float(lots[iter].spots_open)/Float(lots[iter].max_spots) + 0.1
+        cell.lot_name.text = lots[iter].name
+        cell.spots_open.text = String(lots[iter].spots_open) + " of " + String(lots[iter].max_spots)
+        cell.lat = lots[iter].latitude
+        cell.long = lots[iter].longitude
         cell.backgroundColor = UIColor.init(red: 25/255.0, green: 146/255.0, blue: 54/255.0, alpha: CGFloat(alph))
         return cell
     }
